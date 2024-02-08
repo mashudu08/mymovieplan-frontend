@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingService } from '../../services/booking.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-booking-list',
@@ -8,8 +9,12 @@ import { BookingService } from '../../services/booking.service';
 })
 export class BookingListComponent implements OnInit {
 
-  constructor(private bookingService: BookingService) { }
+  private baseUrl = ""
+
+  constructor(private bookingService: BookingService, private http: HttpClient) { }
  
+  bookings: any[] = [];
+  
   ngOnInit(): void {
     this.getBookings();
   }
@@ -21,6 +26,15 @@ export class BookingListComponent implements OnInit {
       console.log(bookings);
     });
   }
-
+ 
+  // fetchBookings(bookings: number) {
+  //   this.http.get<any[]>('/api/bookings').subscribe(
+  //     data => {
+  //       this.bookings = data;
+  //     },
+  //     error => {
+  //       console.error('Error fetching booking data:', error);
+  //     }
+  //   );
+  // }
 }
-

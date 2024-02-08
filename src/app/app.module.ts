@@ -9,12 +9,20 @@ import { BookingListComponent } from './booking/booking-list/booking-list.compon
 import { HomeComponent } from './home/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BookingService } from './services/booking.service';
+import { CartComponent } from './cart/cart/cart.component';
+import { GenreComponent } from './genre/genre/genre.component';
+import { MovieComponent } from './movie/movie/movie.component';
+import { AdminPortalComponent } from './admin/admin-portal/admin-portal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookingListComponent,
-    HomeComponent
+    HomeComponent,
+    CartComponent,
+    GenreComponent,
+    MovieComponent,
+    AdminPortalComponent
   ],
   imports: [
     BrowserModule,

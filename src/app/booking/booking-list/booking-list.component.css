@@ -1,0 +1,21 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  

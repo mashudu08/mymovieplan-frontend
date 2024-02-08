@@ -1,2 +1,13 @@
 <p>booking-list works!</p>
-jghgcjhfvjkh
+<br>
+<div class="card-container">
+    <div class="card" *ngFor="let booking of bookings">
+      <div class="card-body">
+        <h5 class="card-title">{{ booking.movie?.movieName }}</h5>
+        <p class="card-text">Quantity: {{ booking.quantity }}</p>
+        <p class="card-text">Payment Status: {{ booking.paymentStatus }}</p>
+        <p class="card-text">Booking Date: {{ booking.bookingDate | date: 'medium' }}</p>
+      </div>
+    </div>
+  </div>
+  
