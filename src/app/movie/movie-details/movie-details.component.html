@@ -45,19 +45,7 @@
             </div>
         </div>
     </nav>
-<br>
-	<h1 class="main-page-title" align="center">Now Showing</h1>
-	<br>
-	<div class="movie-container">
-		<div class="movie-row">
-			<div *ngFor="let movie of movies" class="movie">
-				<img class="movie-image" src="{{movie.image}}" />
-				<p class="movie-title">{{movie.movieName}}</p>
-			</div>
-		</div>
-	</div>
-<!-- Movie Details -->
-    <!-- <div class="container mt-5">
+ <div class="container mt-5">
         <div class="row">
             <div class="col-sm-5 d-flex justify-content-center">
                 <img class="mt-5" height="300px" width="300px" [src]="movie.imageUrl" alt="Movie Poster">
@@ -67,13 +55,13 @@
                 <h4>{{ movie.description }}</h4>
                 <p>Genre: {{ movie.genre }}</p>
                 <p>Language: {{ movie.language }}</p>
-                <h2>R <span>{{ movie.ticketPrice }}</span></h2>
-                <h5>Show Timings: {{ movie.showTimings }}</h5>
+                <p>R <span>{{ movie.ticketPrice }}</span></p>
+                <p>Show Timings: {{ movie.showTimings }}</p>
                 
                 <button (click)="addToCart()" class="btn btn-primary">Add to cart</button>
             </div>
         </div>
-    </div> -->
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
@@ -86,3 +74,4 @@
 </body>
 
 </html>
+
