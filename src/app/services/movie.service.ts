@@ -7,28 +7,28 @@ import { Observable } from 'rxjs';
 })
 export class MovieService {
 
-  
+  private baseUrl = "http://localhost:9090";
 
   constructor(private http: HttpClient) { }
 
-  addBooking(booking: any): Observable<any> {
-    return this.http.post<any>('http://your-api-endpoint.com/bookings/add-booking', booking);
+  addMovie(movie: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/movies/add-movies`, movie);
   }
 
-  getAllBookings(): Observable<any> {
-    return this.http.get<any>('http://your-api-endpoint.com/bookings/get-bookings');
+  getMovieById(id: number): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/movies/movie/${id}`);
   }
 
-  getBookingById(id: number): Observable<any> {
-    return this.http.get<any>(`http://your-api-endpoint.com/bookings/booking/${id}`);
+  getAllMovies(): Observable<any>{
+    return this.http.get<any>(`${this.baseUrl}/movies/get-movies`);
   }
 
-  updateBooking(booking: any): Observable<any> {
-    return this.http.put<any>('http://your-api-endpoint.com/bookings/update-booking', booking);
+  updateMovie(movie: any): Observable<any> {
+    return this.http.put<any>(`${this.baseUrl}/movies/update-movie`, movie);
   }
 
-  deleteBooking(id: number): Observable<any> {
-    return this.http.delete<any>(`http://your-api-endpoint.com/bookings/booking/${id}`);
-  }
+  // deleteMovie(id: number): Observable<any> {
+  //   return this.http.delete<any>(`http://your-api-endpoint.com/movies/movie/${id}`);
+  // }
 
 }

@@ -22,4 +22,11 @@ export class BookingService {
       return this.http.post(`${this.baseUrl}/bookings/add-booking`, booking);
     }
   
+    updateBooking(booking: any): Observable<any> {
+      return this.http.put<any>('http://your-api-endpoint.com/bookings/update-booking', booking);
+    }
+  
+    deleteBooking(id: number): Observable<any> {
+      return this.http.delete<any>(`http://your-api-endpoint.com/bookings/booking/${id}`);
+    }
 }

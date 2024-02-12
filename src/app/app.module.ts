@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
@@ -13,6 +14,8 @@ import { CartComponent } from './cart/cart/cart.component';
 import { GenreComponent } from './genre/genre/genre.component';
 import { MovieComponent } from './movie/movie/movie.component';
 import { AdminPortalComponent } from './admin/admin-portal/admin-portal.component';
+import { CheckoutComponent } from './checkout/checkout/checkout.component';
+import { MovieDetailsComponent } from './movie/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +25,16 @@ import { AdminPortalComponent } from './admin/admin-portal/admin-portal.componen
     CartComponent,
     GenreComponent,
     MovieComponent,
-    AdminPortalComponent
+    AdminPortalComponent,
+    CheckoutComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [HttpClient, BookingService],
   bootstrap: [AppComponent]
